@@ -6,11 +6,11 @@ import random
 import pickle
 
 # List of the split training data files
-data_files = ['training_data_part_2.pkl','training_data_part_4.pkl','training_data_part_1.pkl','training_data_part_3.pkl']
+data_files = ['training_data_part_4.pkl','training_data_part_1.pkl','training_data_part_3.pkl','training_data_part_2.pkl']
 img_size = 224
 
 # Load the model
-new_model = tf.keras.models.load_model("final_model.h5")
+new_model = tf.keras.models.load_model("modeltrain4.h5")
 new_model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 for data_file in data_files:
@@ -36,6 +36,6 @@ for data_file in data_files:
     print(y[0])
     
     # Train the model
-    new_model.fit(X, Y, epochs=10)
+    new_model.fit(X, Y, epochs=1)
 # Save the trained model
-new_model.save("model.h5")
+new_model.save("trained_model.h5")
