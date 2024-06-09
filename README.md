@@ -15,7 +15,7 @@ How to use:
 4. Run train_data.py (adjust epoch's number and if the accuracy is not enough for you run it again) 
 5. You can check your model using multiple ways 
     * check_model.py - checks an image you uploaded
-    * real_time_check.py - checks real time emotions using your camera 
+    * real_time.py - checks real time emotions using your webcamera 
     * test_data_check.py - checks your test data accuracy 
 
 What do you need:

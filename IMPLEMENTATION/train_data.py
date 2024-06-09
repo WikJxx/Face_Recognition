@@ -10,7 +10,7 @@ data_files = ['training_data_part_4.pkl','training_data_part_1.pkl','training_da
 img_size = 224
 
 # Load the model
-new_model = tf.keras.models.load_model("modeltrain4.h5")
+new_model = tf.keras.models.load_model("trained_model.h5")
 new_model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 for data_file in data_files:

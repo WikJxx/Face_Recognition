@@ -6,7 +6,7 @@ import os
 
 Classes = ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"]
 
-new_model = tf.keras.models.load_model("modeltrain4.h5")
+new_model = tf.keras.models.load_model("trained_model.h5")
 
 test_directory = "IMPLEMENTATION\\test\\"
 img_size = 224
