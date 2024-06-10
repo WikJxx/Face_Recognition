@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 
 #Import trained model
-new_model = tf.keras.models.load_model("trained_model.h5")
+new_model = tf.keras.models.load_model("second_training_model.h5")
 
 #Read the photo
 frame = cv2.imread("disgust.webp")

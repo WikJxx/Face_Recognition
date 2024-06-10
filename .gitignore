@@ -29,13 +29,15 @@ IMPLEMENTATION/test
 IMPLEMENTATION/train
 Face_Recognition/.vscode
 my_model*
-training_data_part*
+training_data*
 .vscode*
 images*
 trained*
 image*
 disgust*
 third*
+second*
+first*
 model*
 final*
 
