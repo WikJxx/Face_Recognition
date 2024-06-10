@@ -15,8 +15,7 @@ def preprocess_image(image_path):
     image = cv2.imread(image_path)
     image_resized = cv2.resize(image, (img_size, img_size))
     image_normalized = image_resized / 255.0  # Normalize
-    image_expanded = np.expand_dims(image_normalized, axis=0)  # Add batch dimension
-    return image_expanded
+    return image_normalized
 
 total_images = 0
 correct_predictions = 0
