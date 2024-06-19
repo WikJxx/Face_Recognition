@@ -8,11 +8,11 @@ import pickle
 from sklearn.model_selection import train_test_split
 
 # List of the split training data files
-data_files = ['training_data_part_1.pkl']
+data_files = ['training_data_part_3.pkl','training_data_part_2.pkl']
 img_size = 224
 
 # Load the model
-new_model = tf.keras.models.load_model("second_training_model.h5")
+new_model = tf.keras.models.load_model("MODEL123.h5")
 
 # Add L2 regularization to the existing layers
 def add_regularization(model, l2_factor=0.001):
@@ -63,11 +63,11 @@ for data_file in data_files:
 
     # Train the model with early stopping and data augmentation
     callbacks = [keras.callbacks.EarlyStopping(monitor='val_loss', patience=3)]
-    new_model.fit(data_augmentation.flow(X_train, y_train),
-                  epochs=25,
+    new_model.fit(data_augmentation.flow(X_train, y_train, batch_size=32),
+                  epochs=20 ,
                   validation_data=(X_val, y_val),
                   callbacks=callbacks,
                   shuffle=True)
 
 # Save the trained model
-new_model.save("third_training_model.h5")
+new_model.save("Modulul.h5")

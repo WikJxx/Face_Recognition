@@ -6,7 +6,7 @@ import os
 
 Classes = ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"]
 
-new_model = tf.keras.models.load_model("second_training_model.h5")
+new_model = tf.keras.models.load_model("MODULUL.h5")
 
 test_directory = "IMPLEMENTATION\\test\\"
 img_size = 224
@@ -27,6 +27,7 @@ for category in Classes:
         img_path = os.path.join(path, img_name)
         
         preprocessed_image = preprocess_image(img_path)
+        preprocessed_image = np.expand_dims(preprocessed_image, axis=0)  # Add batch dimension
         
         predictions = new_model.predict(preprocessed_image)
         predicted_label_index = np.argmax(predictions)

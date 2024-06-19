@@ -26,3 +26,4 @@ What do you need:
 5. Make sure you have numpy and matplotlib also installed.
 6. Download cascade for frontal faces(face detection algorithm) https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_frontalface_default.xml
 7. Install deepface (pip install deepface) only for real time image
+8. Install scikit learn (pip install scikit-learn)
